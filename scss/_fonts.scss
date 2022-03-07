@@ -1,0 +1,28 @@
+@import "_colors.scss";
+$font: 'Barlow Semi Condensed', sans-serif;
+$weight-sm: 500;
+$weight-lg: 600;
+
+body{
+    font-family: $font;
+    background-color: $light-grayish-blue;
+}
+
+h1{
+    color: $white;
+}
+ 
+.paragraph{
+    font-weight: $weight-sm;
+    color: $light-gray;
+    opacity: 70%;
+}
+
+.paragraph-white {
+    color: $very-dark-blackish-blue;
+    opacity: 70%;
+  }
+
+#verified{
+    opacity: 50%;
+}

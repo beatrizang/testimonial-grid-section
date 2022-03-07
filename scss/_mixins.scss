@@ -1,0 +1,129 @@
+@import "_colors.scss";
+
+@mixin testimonial ($bg-color,$width){
+    background-color: $bg-color;
+    text-align: left;
+    width: $width;
+    border-radius: 0.5em;
+    padding: 2em;
+    margin: 1em;
+    h1{
+        margin-bottom: 1em;
+    }
+}
+
+@mixin position-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin position-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin border-image ($color){
+    img{
+        border: 3px solid $color;
+    }
+}
+
+@mixin profile {
+    display: flex;
+    img{
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    
+    align-items: center;
+    color: $light-gray;
+    
+ }
+
+@mixin shadow {
+    box-shadow: 20px 20px 18px -30px black;
+} 
+
+ @mixin image-bg {
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 85% top; 
+    
+ }
+ 
+
+
+.testimonials-top-left{
+    @include testimonial ($moderate-violet,80%);
+    @include image-bg();
+    @include shadow();
+}
+
+.testimonials-top-right{
+    @include testimonial($very-dark-grayish-blue,30%);
+    @include shadow();
+}
+
+.testimonials-bottom-left{
+    @include testimonial($white,30%);
+    h1{
+        color: $very-dark-grayish-blue;
+    }
+    @include shadow();
+}
+
+.testimonials-bottom-right{
+    @include testimonial($very-dark-blackish-blue,80%);
+    @include shadow();
+}
+
+.testimonial-aside{
+    @include testimonial($white,100%);
+    h1{
+        color: $very-dark-grayish-blue;
+    }
+    width: 52em;
+    
+    @include shadow();
+}
+
+
+.profile{
+    @include profile;
+    margin-bottom: 1em;
+}
+
+.profile-daniel{
+    @include border-image($light-moderate-violet);
+}
+
+.profile-patrick{
+    @include border-image($moderate-violet);
+}
+
+
+
+.testimonials-top{
+    @include position-row();
+    
+}
+
+.testimonials-bottom{
+    @include position-row();
+    
+}
+
+.testimonials {
+    @include position-row();
+    width: 100%;
+    align-items: center;
+}
+
+.container {
+    transform: scale(0.8);
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 1em;
+}

@@ -1,0 +1,53 @@
+@import "_mixins.scss";
+
+$width: 100%;
+
+
+@media only screen and (max-width: 1260px){
+    .testimonials-top{
+        @include position-column();
+    }
+
+    .testimonials-bottom{
+        @include position-column();
+        
+    }
+
+    .testimonials {
+        @include position-column();
+        width: 100%;
+    }
+
+    .container{
+        @include position-column();
+        align-items: center
+    }
+
+    .testimonials-top-left{
+        @include testimonial ($moderate-violet,$width);
+    }
+    
+    .testimonials-top-right{
+        @include testimonial($very-dark-grayish-blue,$width);
+       
+    }
+    
+    .testimonials-bottom-left{
+        @include testimonial($white,$width);
+ 
+    }
+    
+    .testimonials-bottom-right{
+        @include testimonial($very-dark-blackish-blue,$width);
+       
+    }
+    
+    .testimonial-aside{
+        @include testimonial($white,$width);
+        width: 100%;
+        margin-left: 2em;
+    }
+
+
+
+}
